@@ -13,7 +13,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- plugin related
-require('lazy').setup('pedro.plugins')
+require('lazy').setup('pedro.plugins', {})
 
 -- other stuff
 require('pedro.options')
