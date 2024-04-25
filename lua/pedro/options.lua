@@ -6,7 +6,6 @@ local options = {
   fileencoding = 'utf-8',                  -- the encoding written to a file
 
   clipboard = 'unnamedplus',               -- allows neovim to access the system clipboard
-  cmdheight = 2,                           -- more space in the neovim command line for displaying messages
   completeopt = { 'menuone', 'noselect' }, -- mostly just for cmp
   conceallevel = 0,                        -- so that `` is visible in markdown files
   hlsearch = true,                         -- highlight all matches on previous search pattern
@@ -18,36 +17,32 @@ local options = {
   smartcase = true,                        -- smart case
   splitbelow = true,                       -- force all horizontal splits to go below current window
   splitright = true,                       -- force all vertical splits to go to the right of current window
-  -- termguicolors = true,                    -- set term gui colors (most terminals support this)
-  timeoutlen = 1000,                        -- time to wait for a mapped sequence to complete (in milliseconds)
+  termguicolors = true,                    -- set term gui colors (most terminals support this)
   updatetime = 300,                        -- faster completion (4000ms default)
+  timeoutlen = 1000,                       -- time to wait for a mapped sequence to complete (in milliseconds)
 
   expandtab = true,                        -- convert tabs to spaces
   shiftwidth = 2,                          -- the number of spaces inserted for each indentation
   tabstop = 2,                             -- insert 2 spaces for a tab
   smartindent = true,                      -- make indenting smarter again
 
+  cmdheight = 2,                           -- more space in the neovim command line for displaying messages
   cursorline = true,                       -- highlight the current line
+  wrap = false,                            -- display lines as one long line
   number = true,                           -- set numbered lines
-  relativenumber = false,                  -- set relative numbered lines
+  relativenumber = true,                   -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
   signcolumn = 'yes',                      -- always show the sign column, otherwise it would shift the text each time
-  wrap = false,                            -- display lines as one long line
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
-  guifont = 'Ubuntu_Mono:h17',               -- the font used in graphical neovim applications
+
+  guifont = 'Consolas NF:h13',             -- the font used in graphical neovim applications
 }
 
 vim.opt.shortmess:append 'c'
 
 for opt, val in pairs(options) do
   vim.opt[opt] = val
-end
-
--- safe colorscheme change
-local scheme_ok, _ = pcall(vim.cmd.colorscheme, 'vscode')
-if not scheme_ok then
-  vim.cmd.colorscheme('habamax')
 end
 
 vim.cmd 'set whichwrap+=<,>,[,],h,l'
