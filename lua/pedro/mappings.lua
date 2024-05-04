@@ -16,4 +16,7 @@ map('n', '<leader>t', function()
 end)
 
 
-map('t', '<C- >', '<C-\\><C-n>')
+map('t', '<C- >', '<C-\\><C-n>:bd!<Enter>')
+--[[map('n', '<C- >', function()
+  
+end)]]
