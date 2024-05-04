@@ -2,7 +2,18 @@
 vim.g.mapleader = ' '
 
 local function map(mode, cmd, bind)
-  vim.api.nvim_set_keymap(mode, cmd, bind, {silent = true})
+  vim.keymap.set(mode, cmd, bind, {silent = true})
 end
 
-map('n', '<leader>fv', ':Ex<Enter>')
+map('n', '<C-q>', vim.cmd.quit)
+map('n', '<leader>fv', vim.cmd.Ex)
+map('n', '<leader>t', function()
+  if vim.loop.os_uname().sysname == 'Windows' then
+    vim.cmd.term()
+  else
+    vim.cmd.term('bash')
+  end
+end)
+
+
+map('t', '<C- >', '<C-\\><C-n>')
