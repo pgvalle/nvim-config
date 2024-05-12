@@ -20,3 +20,12 @@ map('t', '<C- >', '<C-\\><C-n>:bd!<Enter>')
 --[[map('n', '<C- >', function()
   
 end)]]
+
+
+-- Git mappings
+map('n', '<leader>Gc', function()
+  vim.ui.input({ prompt = 'Write a message to the commit: ' }, function(input)
+    print(input)
+    --vim.cmd(':G commit -m ' + input)
+  end)
+end)
