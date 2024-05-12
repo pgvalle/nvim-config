@@ -26,6 +26,6 @@ end)]]
 map('n', '<leader>Gc', function()
   vim.ui.input({ prompt = 'Write a message to the commit: ' }, function(input)
     print(input)
-    --vim.cmd(':G commit -m ' + input)
+    vim.cmd('G commit -m bruuh')
   end)
 end)
