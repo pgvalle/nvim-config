@@ -1,7 +1,7 @@
 -- Needs to be set before initializing lazy
 vim.g.mapleader = ' '
 
-local function map(mode, cmd, bind)
+local map = function(mode, cmd, bind)
   vim.keymap.set(mode, cmd, bind, {silent = true})
 end
 
@@ -11,21 +11,11 @@ map('n', '<leader>t', function()
   if vim.loop.os_uname().sysname == 'Windows' then
     vim.cmd.term()
   else
-    vim.cmd.term('bash')
+    vim.cmd.term(os.getenv('SHELL'))
   end
 end)
 
 
-map('t', '<C- >', '<C-\\><C-n>:bd!<Enter>')
---[[map('n', '<C- >', function()
-  
-end)]]
+map('t', '<C-q>', '<C-\\><C-n>:bd!<Enter>')
 
-
--- Git mappings
-map('n', '<leader>Gc', function()
-  vim.ui.input({ prompt = 'Write a message to the commit: ' }, function(input)
-    print(input)
-    vim.cmd('G commit -m "' .. input .. '"')
-  end)
-end)
+-- vim.ui.input({ prompt = 'Write commit message: ' }, function(input)
