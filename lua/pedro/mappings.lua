@@ -15,6 +15,8 @@ map('n', '<leader>t', function()
   end
 end)
 
+map('n', '<leader>ff', ':Telescope find_files<Enter>')
+
 
 map('t', '<C-q>', '<C-\\><C-n>:bd!<Enter>')
 
