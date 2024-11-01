@@ -6,18 +6,6 @@ local map = function(mode, cmd, bind)
 end
 
 map('n', '<C-q>', vim.cmd.quit)
-map('n', '<leader>fv', vim.cmd.Ex)
-map('n', '<leader>t', function()
-  if vim.loop.os_uname().sysname == 'Windows' then
-    vim.cmd.term()
-  else
-    vim.cmd.term(os.getenv('SHELL'))
-  end
-end)
-
 map('n', '<leader>ff', ':Telescope find_files<Enter>')
-
-
-map('t', '<C-q>', '<C-\\><C-n>:bd!<Enter>')
 
 -- vim.ui.input({ prompt = 'Write commit message: ' }, function(input)

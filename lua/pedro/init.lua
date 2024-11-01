@@ -3,4 +3,4 @@ require('pedro.mappings')
 
 require('pedro.lazy')
 
-vim.cmd.colorscheme('gruber-darker')
+vim.cmd.colorscheme('monochrome')

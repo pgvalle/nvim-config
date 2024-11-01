@@ -1,7 +1,5 @@
 return {
-  'blazkowolf/gruber-darker.nvim',
-
+  'kdheepak/monochrome.nvim',
   config = function()
-    require('gruber-darker').setup()
   end
 }
