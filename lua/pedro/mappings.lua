@@ -6,5 +6,7 @@ local map = function(mode, bind, cmd)
 end
 
 map('n', '<leader>q', vim.cmd.quit)
+
 map('n', '<leader>ff', ':Telescope find_files<Enter>')
+map('n', '<leader>fb', ':Telescope buffers<Enter>')
 
