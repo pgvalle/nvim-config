@@ -22,8 +22,8 @@ local options = {
   timeoutlen = 1000,                       -- time to wait for a mapped sequence to complete (in milliseconds)
 
   expandtab = true,                        -- convert tabs to spaces
-  shiftwidth = 2,                          -- the number of spaces inserted for each indentation
-  tabstop = 2,                             -- insert 2 spaces for a tab
+  shiftwidth = 4,                          -- the number of spaces inserted for each indentation
+  tabstop = 4,                             -- insert 2 spaces for a tab
   smartindent = true,                      -- make indenting smarter again
 
   cmdheight = 2,                           -- more space in the neovim command line for displaying messages
