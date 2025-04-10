@@ -4,4 +4,4 @@ require('pedro.autocmds')
 
 require('pedro.lazy')
 
-vim.cmd.colorscheme('unokai')
+vim.cmd.colorscheme('vscode')
