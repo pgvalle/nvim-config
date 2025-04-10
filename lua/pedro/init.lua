@@ -1,6 +1,7 @@
 require('pedro.options')
 require('pedro.mappings')
+require('pedro.autocmds')
 
 require('pedro.lazy')
 
-vim.cmd.colorscheme('mbc')
+vim.cmd.colorscheme('unokai')
