@@ -7,11 +7,14 @@ end
 
 map('n', '<leader>q', vim.cmd.quit)
 
-map('n', '<leader>lf', function()
+map('n', '<leader>ff', function()
   require('telescope.builtin').find_files({
-    hidden = false,
-    no_ignore = false
+    -- hidden = false,
+    -- no_ignore = false
   })
 end)
-map('n', '<leader>ff', ':Telescope buffers<Enter>')
 
+
+map('n', '<leader>fb', ':Telescope buffers<Enter>')
+
+map('n', '<leader>e', vim.cmd.Ex)
