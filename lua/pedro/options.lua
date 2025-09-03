@@ -2,7 +2,7 @@ local options = {
         backup = false,
         writebackup = false,
         swapfile = false,
-        undofile = true,
+        undofile = false,
         fileencoding = 'utf-8',
 
         clipboard = 'unnamedplus',
@@ -21,8 +21,8 @@ local options = {
         timeoutlen = 1000,                       -- time to wait for a mapped sequence to complete (in milliseconds)
 
         expandtab = true, -- convert tabs to spaces
-        shiftwidth = 8, -- the number of spaces inserted for each indentation
-        tabstop = 8, -- insert x spaces for a tab
+        shiftwidth = 4, -- the number of spaces inserted for each indentation
+        tabstop = 4, -- insert x spaces for a tab
         smartindent = true, -- make indenting smarter again
         showtabline = 2, -- always show tabs
 

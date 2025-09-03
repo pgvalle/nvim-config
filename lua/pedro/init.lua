@@ -4,4 +4,3 @@ require('pedro.autocmds')
 
 require('pedro.lazy')
 
-vim.cmd.colorscheme('vscode')
