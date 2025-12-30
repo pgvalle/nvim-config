@@ -37,15 +37,6 @@ local options = {
     sidescrolloff = 8
 }
 
-vim.diagnostic.config({
-    virtual_text = true, -- set to false to disable default inline text
-    signs = true,        -- show icons in the gutter
-    underline = true,    -- underline the problematic text
-    update_in_insert = false, -- don't update while in insert mode
-    severity_sort = true
-})
-
-vim.g.mapleader = ' ' -- Needs to be set before initializing lazy
 vim.g.python_recommended_style = false
 
 vim.opt.shortmess:append('c')
@@ -54,5 +45,5 @@ for opt, val in pairs(options) do
     vim.opt[opt] = val
 end
 
-vim.cmd 'set whichwrap+=<,>,[,],h,l'
-vim.cmd 'set iskeyword+=-'
+vim.cmd('set whichwrap+=<,>,[,],h,l')
+vim.cmd('set iskeyword+=-')
